@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-btn @click="navForList"> criar</v-btn>
+        <v-btn @click="navForCreate"> criar</v-btn>
         <v-btn @click="navForList"> listar</v-btn>
         <v-btn @click="navForHome"> casa</v-btn>
     </div>
