@@ -1,17 +1,28 @@
 <template>
     <div>
-        <v-btn :to="{ name: 'create'}"> criar</v-btn>
-        <v-btn :to="{ name: 'list'}"> listar</v-btn>
-        <v-btn :to="{ name: 'home'}"> casa</v-btn>
+        <v-btn @click="navForList"> criar</v-btn>
+        <v-btn @click="navForList"> listar</v-btn>
+        <v-btn @click="navForHome"> casa</v-btn>
     </div>
 </template>
   
 <script>
 export default {
-data() {
-    return {
-        
-    };
-}
+    data() {
+        return {
+
+        };
+    },
+    methods: {
+    navForHome() {
+      this.$router.push({ name: 'home' }); // Use o nome da rota para navegar
+    },
+    navForList() {
+      this.$router.push({ name: 'list' }); // Use o nome da rota para navegar
+    },
+    navForCreate() {
+      this.$router.push({ name: 'create' }); // Use o nome da rota para navegar
+    },
+  },
 };
 </script>
