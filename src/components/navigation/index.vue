@@ -15,13 +15,14 @@ export default {
     },
     methods: {
     navForHome() {
-      this.$router.push({ name: 'home' }); // Use o nome da rota para navegar
+      this.$route.name != 'home' ? this.$router.push({ name: 'home' }) :  ''
     },
     navForList() {
-      this.$router.push({ name: 'list' }); // Use o nome da rota para navegar
+
+      this.$route.name != 'list' ? this.$router.push({ name: 'list' }) :  ''
     },
     navForCreate() {
-      this.$router.push({ name: 'create' }); // Use o nome da rota para navegar
+      this.$route.name != 'create' ? this.$router.push({ name: 'create' }) :  ''
     },
   },
 };
