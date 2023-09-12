@@ -15,11 +15,14 @@
         <v-btn @click="navMutation"> mutation</v-btn>
         {{ $t('greeting') }}
         {{ $t('HomeArea') }}
-       
+
+        <v-btn @click="showModel"> new task</v-btn>
     </div>
 </template>
   
 <script>
+import Task from '@/models/Task';
+
 export default {
     data() {
         return {
@@ -45,8 +48,13 @@ export default {
 
     navMutation(){
       this.$store.commit('testeMutation2')
-    }
+    },
     
+    showModel(){
+      let newTask = new Task(1, 'Fazer compras', 'Comprar mantimentos para o jantar', false)
+      
+      console.log(newTask.newTaskFunction(5))
+    }
   },
 };
 </script>
