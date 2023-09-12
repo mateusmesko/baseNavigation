@@ -3,6 +3,7 @@
         <v-btn @click="navForCreate"> criar</v-btn>
         <v-btn @click="navForList"> listar</v-btn>
         <v-btn @click="navForHome"> casa</v-btn>
+        {{ $t('greeting') }}
     </div>
 </template>
   
@@ -21,7 +22,7 @@ export default {
 
       this.$route.name != 'list' ? this.$router.push({ name: 'list' }) :  ''
     },
-    navForCreate() {
+    navForCreate() {xx
       this.$route.name != 'create' ? this.$router.push({ name: 'create' }) :  ''
     },
   },
