@@ -1,15 +1,14 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import testeModule from './request'
+
+import actions from './actions';
+import state from './state';
+import mutations from './mutations';
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-    request:[
-      {title:'teste',number:1},
-      {title:'teste2',number:2}
-    ]
-  },
   getters: {
     testeGetters(){
       var teste = 1
@@ -17,17 +16,26 @@ export default new Vuex.Store({
       return teste
     }
   },
-  mutations: {
-    testeMutation(state){
-      console.log('teste mutation')
-    }
-  },
-  actions: {
-    testeActions(){
-      console.log('testeAction')
-    }
-  },
-  modules: {
 
+  state,
+  mutations,
+  actions,
+  modules: {
+    teste: testeModule
   }
 })
+
+
+// import Vue from 'vue';
+// import Vuex from 'vuex';
+
+
+// import actions from './getters';
+
+// Vue.use(Vuex);
+
+// export default new Vuex.Store({
+//   state,
+//   mutations,
+//   actions,
+// });
